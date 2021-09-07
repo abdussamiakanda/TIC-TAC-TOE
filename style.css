@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --primary: #5F939A;
+  --secondary: #F2EDD7;
+  --third: #3A6351;
+  --fourth: #A0937D;
+
+}
+body{
+  margin: 0;
+  font-family: 'Concert One', cursive;
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* HEADER CLASSES */
+
+.header{
+  background-color: var(--secondary);
+  border: 3px solid var(--secondary);
+  color:var(--third);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head{
+  font-size: 2em;
+  margin: 10px;
+  color: red;
+}
+.reset{
+  float: right;
+  color: #F2EDD7;
+  font-size: 35px;
+  padding: 10px 15px;
+  margin-right: 20px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.reset:hover{
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* DASHBOARD */
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.player-area {
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+  border: 3px solid var(--secondary);
+  border-radius: 10px;
+}
+.turn{
+  background-color: var(--secondary);
+  animation-name: turnborder;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes turnborder {
+  0% {background-color: 3px solid rgba(0,0,0,0.1);color: rgba(0,0,0,1);}
+  50% {background-color: 3px solid var(--secondary);color: rgba(255,255,255,1);}
+  100% {background-color: 3px solid rgba(0,0,0,0.1);color: rgba(0,0,0,1);}
+}
+.mid{
+  margin: 20px auto;
+  font-size: 50px;
+  display: grid;
+  text-align: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+    grid-template-areas:
+      "c1 c2 c3"
+      "c4 c5 c6"
+      "c7 c8 c9"
+}
+.cell-0{
+  grid-area: c1;
+  border-bottom: 3px solid var(--secondary);
+  border-right: 3px solid var(--secondary);
+  padding: 20px;
+  height: 120px;
+  width: 100px;
+}
+.cell-1{
+  grid-area: c2;
+  border-bottom: 3px solid var(--secondary);
+  border-right: 3px solid var(--secondary);
+  padding: 20px;
+  height: 120px;
+  width: 100px;
+}
+.cell-2{
+  grid-area: c3;
+  border-bottom: 3px solid var(--secondary);
+  padding: 20px;
+  height: 120px;
+  width: 100px;
+}
+.cell-3{
+  grid-area: c4;
+  border-bottom: 3px solid var(--secondary);
+  border-right: 3px solid var(--secondary);
+  padding: 20px;
+  height: 120px;
+  width: 100px;
+}
+.cell-4{
+  grid-area: c5;
+  border-bottom: 3px solid var(--secondary);
+  border-right: 3px solid var(--secondary);
+  padding: 20px;
+  height: 120px;
+  width: 100px;
+}
+.cell-5{
+  grid-area: c6;
+  border-bottom: 3px solid var(--secondary);
+  padding: 20px;
+  height: 120px;
+  width: 100px;
+}
+.cell-6{
+  grid-area: c7;
+  border-right: 3px solid var(--secondary);
+  padding: 20px;
+  height: 120px;
+  width: 100px;
+}
+.cell-7{
+  grid-area: c8;
+  border-right: 3px solid var(--secondary);
+  padding: 20px;
+  height: 120px;
+  width: 100px;
+}
+.cell-8{
+  grid-area: c9;
+  padding: 20px;
+  height: 120px;
+  width: 100px;
+}
+.hide{
+  display: none;
+}
+
+.cursor{
+  cursor: pointer;
+}
