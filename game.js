@@ -18,7 +18,7 @@ function play(cell){
 function playBot(){
   document.getElementById('you').classList.remove('turn');
   document.getElementById('bot').classList.add('turn');
-  var cell = random_item(cells);
+  var cell = botBrain();
   removeCursor()
 
   setTimeout(function(){
@@ -89,4 +89,30 @@ function removeCursor(){
   for(let x in cells){
     document.getElementById('cell-'+cells[x]).classList.remove('cursor');
   }
+}
+
+function botBrain(){
+  var val = null;
+  if((values[0] === "X" && values[3] === "X" && values[6] !== "O") || (values[4] === "X" && values[2] === "X" && values[6] !== "O") || (values[7] === "X" && values[8] === "X" && values[6] !== "O")){
+    val = 6;
+  } else if((values[6] === "X" && values[3] === "X" && values[0] !== "O") || (values[4] === "X" && values[8] === "X" && values[0] !== "O") || (values[1] === "X" && values[2] === "X" && values[0] !== "O")){
+    val = 0;
+  } else if((values[6] === "X" && values[4] === "X" && values[2] !== "O") || (values[5] === "X" && values[8] === "X" && values[2] !== "O") || (values[0] === "X" && values[1] === "X" && values[2] !== "O")){
+    val = 2;
+  } else if((values[2] === "X" && values[5] === "X" && values[8] !== "O") || (values[0] === "X" && values[4] === "X" && values[8] !== "O") || (values[6] === "X" && values[7] === "X" && values[8] !== "O")){
+    val = 8;
+  } else if((values[6] === "X" && values[0] === "X" && values[3] !== "O") || (values[4] === "X" && values[5] === "X" && values[3] !== "O")){
+    val = 3;
+  } else if((values[1] === "X" && values[4] === "X" && values[7] !== "O") || (values[6] === "X" && values[8] === "X" && values[7] !== "O")){
+    val = 7;
+  } else if((values[4] === "X" && values[7] === "X" && values[1] !== "O") || (values[0] === "X" && values[2] === "X" && values[1] !== "O")){
+    val = 1;
+  } else if((values[2] === "X" && values[8] === "X" && values[5] !== "O") || (values[3] === "X" && values[4] === "X" && values[5] !== "O")){
+    val = 5;
+  } else if((values[1] === "X" && values[7] === "X" && values[4] !== "O") || (values[3] === "X" && values[5] === "X" && values[4] !== "O") || (values[0] === "X" && values[8] === "X" && values[4] !== "O") || (values[6] === "X" && values[2] === "X" && values[4] !== "O")){
+    val = 4;
+  } else{
+    val = random_item(cells);
+  }
+  return val;
 }
