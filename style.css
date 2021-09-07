@@ -11,8 +11,8 @@
 
 }
 body{
+  font-family: 'Fredoka One', cursive;
   margin: 0;
-  font-family: 'Concert One', cursive;
   background-color: var(--primary);
   color: var(--secondary);
   font-size: 20px;
@@ -33,6 +33,7 @@ body{
   font-size: 2em;
   margin: 10px;
   color: red;
+  font-weight: bold;
 }
 .reset{
   float: right;
