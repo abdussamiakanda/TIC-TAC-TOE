@@ -68,7 +68,7 @@ body{
 .turn{
   background-color: var(--secondary);
   animation-name: turnborder;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
 }
 @keyframes turnborder {
