@@ -93,23 +93,23 @@ function removeCursor(){
 
 function botBrain(){
   var val = null;
-  if((values[0] === "O" && values[3] === "O" && values[6] !== "O") || (values[4] === "O" && values[2] === "O" && values[6] !== "O") || (values[7] === "O" && values[8] === "O" && values[6] !== "O")){
+  if((values[0] === "O" && values[3] === "O" && values[6] !== "O" && values[6] !== "X") || (values[4] === "O" && values[2] === "O" && values[6] !== "O" && values[6] !== "X") || (values[7] === "O" && values[8] === "O" && values[6] !== "O" && values[6] !== "X")){
     val = 6;
-  } else if((values[6] === "O" && values[3] === "O" && values[0] !== "O") || (values[4] === "O" && values[8] === "O" && values[0] !== "O") || (values[1] === "O" && values[2] === "O" && values[0] !== "O")){
+  } else if((values[6] === "O" && values[3] === "O" && values[0] !== "O" && values[0] !== "X") || (values[4] === "O" && values[8] === "O" && values[0] !== "O" && values[0] !== "X") || (values[1] === "O" && values[2] === "O" && values[0] !== "O" && values[0] !== "X")){
     val = 0;
-  } else if((values[6] === "O" && values[4] === "O" && values[2] !== "O") || (values[5] === "O" && values[8] === "O" && values[2] !== "O") || (values[0] === "O" && values[1] === "O" && values[2] !== "O")){
+  } else if((values[6] === "O" && values[4] === "O" && values[2] !== "O" && values[2] !== "X") || (values[5] === "O" && values[8] === "O" && values[2] !== "O" && values[2] !== "X") || (values[0] === "O" && values[1] === "O" && values[2] !== "O" && values[2] !== "X")){
     val = 2;
-  } else if((values[2] === "O" && values[5] === "O" && values[8] !== "O") || (values[0] === "O" && values[4] === "O" && values[8] !== "O") || (values[6] === "O" && values[7] === "O" && values[8] !== "O")){
+  } else if((values[2] === "O" && values[5] === "O" && values[8] !== "O" && values[8] !== "X") || (values[0] === "O" && values[4] === "O" && values[8] !== "O" && values[8] !== "X") || (values[6] === "O" && values[7] === "O" && values[8] !== "O" && values[8] !== "X")){
     val = 8;
-  } else if((values[6] === "O" && values[0] === "O" && values[3] !== "O") || (values[4] === "O" && values[5] === "O" && values[3] !== "O")){
+  } else if((values[6] === "O" && values[0] === "O" && values[3] !== "O" && values[3] !== "X") || (values[4] === "O" && values[5] === "O" && values[3] !== "O" && values[3] !== "X")){
     val = 3;
-  } else if((values[1] === "O" && values[4] === "O" && values[7] !== "O") || (values[6] === "O" && values[8] === "O" && values[7] !== "O")){
+  } else if((values[1] === "O" && values[4] === "O" && values[7] !== "O" && values[7] !== "X") || (values[6] === "O" && values[8] === "O" && values[7] !== "O" && values[7] !== "X")){
     val = 7;
-  } else if((values[4] === "O" && values[7] === "O" && values[1] !== "O") || (values[0] === "O" && values[2] === "O" && values[1] !== "O")){
+  } else if((values[4] === "O" && values[7] === "O" && values[1] !== "O" && values[1] !== "X") || (values[0] === "O" && values[2] === "O" && values[1] !== "O" && values[1] !== "X")){
     val = 1;
-  } else if((values[2] === "O" && values[8] === "O" && values[5] !== "O") || (values[3] === "O" && values[4] === "O" && values[5] !== "O")){
+  } else if((values[2] === "O" && values[8] === "O" && values[5] !== "O" && values[5] !== "X") || (values[3] === "O" && values[4] === "O" && values[5] !== "O" && values[5] !== "X")){
     val = 5;
-  } else if((values[1] === "O" && values[7] === "O" && values[4] !== "O") || (values[3] === "O" && values[5] === "O" && values[4] !== "O") || (values[0] === "O" && values[8] === "O" && values[4] !== "O") || (values[6] === "O" && values[2] === "O" && values[4] !== "O")){
+  } else if((values[1] === "O" && values[7] === "O" && values[4] !== "O" && values[4] !== "X") || (values[3] === "O" && values[5] === "O" && values[4] !== "O" && values[4] !== "X") || (values[0] === "O" && values[8] === "O" && values[4] !== "O" && values[4] !== "X") || (values[6] === "O" && values[2] === "O" && values[4] !== "O" && values[4] !== "X")){
     val = 4;
   } else if((values[0] === "X" && values[3] === "X" && values[6] !== "O") || (values[4] === "X" && values[2] === "X" && values[6] !== "O") || (values[7] === "X" && values[8] === "X" && values[6] !== "O")){
     val = 6;
