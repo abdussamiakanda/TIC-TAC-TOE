@@ -98,6 +98,7 @@ function removeCursor(){
   }
 }
 
+
 function botBrain(){
   var val = null;
   if(level === 'Jarvis Pro' && values[4] !== 'X' && values[4] !== 'O'){
