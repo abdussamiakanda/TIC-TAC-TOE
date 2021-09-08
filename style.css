@@ -207,6 +207,12 @@ body{
   height: 120px;
   width: 100px;
 }
+
+.red{
+  color: red;
+}
+
+
 .hide{
   display: none;
 }

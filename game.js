@@ -65,8 +65,10 @@ function checkWinner(x){
   if((values[0] === x && values[3] === x && values[6] === x) || (values[1] === x && values[4] === x && values[7] === x) || (values[2] === x && values[5] === x && values[8] === x) || (values[0] === x && values[1] === x && values[2] === x) || (values[3] === x && values[4] === x && values[5] === x) || (values[6] === x && values[7] === x && values[8] === x) || (values[0] === x && values[4] === x && values[8] === x) || (values[2] === x && values[4] === x && values[6] === x)){
     if(x === 'X'){
       document.getElementById('you').innerHTML = "You won!";
+      winColor('X');
     }else if(x === 'O'){
       document.getElementById('bot').innerHTML = level+" won!";
+      winColor('O');
     }
     removeCursor();
     document.getElementById('reset').innerHTML = `<div onclick="resetGame()" class="reset"><i class="fa fa-repeat" aria-hidden="true"></i></div>`;
@@ -79,6 +81,42 @@ function checkWinner(x){
   }
   if(cells.length === 0){
     document.getElementById('reset').innerHTML = `<div onclick="resetGame()" class="reset"><i class="fa fa-repeat" aria-hidden="true"></i></div>`;
+  }
+}
+
+function winColor(what){
+  if(values[0] === what && values[3] === what && values[6] === what){
+    document.getElementById('cell-0').style.color = 'red';
+    document.getElementById('cell-3').style.color = 'red';
+    document.getElementById('cell-6').style.color = 'red';
+  } else if(values[1] === what && values[4] === what && values[7] === what){
+    document.getElementById('cell-1').style.color = 'red';
+    document.getElementById('cell-4').style.color = 'red';
+    document.getElementById('cell-7').style.color = 'red';
+  } else if(values[2] === what && values[5] === what && values[8] === what){
+    document.getElementById('cell-2').style.color = 'red';
+    document.getElementById('cell-5').style.color = 'red';
+    document.getElementById('cell-8').style.color = 'red';
+  } else if(values[0] === what && values[1] === what && values[2] === what){
+    document.getElementById('cell-0').style.color = 'red';
+    document.getElementById('cell-1').style.color = 'red';
+    document.getElementById('cell-2').style.color = 'red';
+  } else if(values[3] === what && values[4] === what && values[5] === what){
+    document.getElementById('cell-3').style.color = 'red';
+    document.getElementById('cell-4').style.color = 'red';
+    document.getElementById('cell-5').style.color = 'red';
+  } else if(values[6] === what && values[7] === what && values[8] === what){
+    document.getElementById('cell-6').style.color = 'red';
+    document.getElementById('cell-7').style.color = 'red';
+    document.getElementById('cell-8').style.color = 'red';
+  } else if(values[0] === what && values[4] === what && values[8] === what){
+    document.getElementById('cell-0').style.color = 'red';
+    document.getElementById('cell-4').style.color = 'red';
+    document.getElementById('cell-8').style.color = 'red';
+  } else if(values[2] === what && values[4] === what && values[6] === what){
+    document.getElementById('cell-2').style.color = 'red';
+    document.getElementById('cell-4').style.color = 'red';
+    document.getElementById('cell-6').style.color = 'red';
   }
 }
 
