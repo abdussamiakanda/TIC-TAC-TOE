@@ -7,7 +7,7 @@ function levelBot(bot){
   level = bot;
   document.getElementById('popup').style.display='none';
   document.getElementById('bot').innerHTML = bot;
-  if(bot === "Jarvis"){
+  if(bot === "Jarvis Pro"){
     auth = false;
     playBot()
   }
@@ -100,7 +100,7 @@ function removeCursor(){
 
 function botBrain(){
   var val = null;
-  if(level === 'Jarvis' && values[4] !== 'X' && values[4] !== 'O'){
+  if(level === 'Jarvis Pro' && values[4] !== 'X' && values[4] !== 'O'){
     val = 4;
   } else if((values[0] === "O" && values[3] === "O" && values[6] !== "O" && values[6] !== "X" && level === 'Jarvis') || (values[4] === "O" && values[2] === "O" && values[6] !== "O" && values[6] !== "X" && level === 'Jarvis') || (values[7] === "O" && values[8] === "O" && values[6] !== "O" && values[6] !== "X" && level === 'Jarvis')){
     val = 6;
