@@ -7,9 +7,11 @@ function levelBot(bot){
   level = bot;
   document.getElementById('popup').style.display='none';
   document.getElementById('bot').innerHTML = bot;
+  document.getElementById('leave').innerHTML = `<div onclick="leaveGame()" class="reset"><i class="fa fa-sign-out" aria-hidden="true"></i></div>`;
+  document.getElementById('reset').innerHTML = ``;
   if(bot === "Jarvis Pro"){
     auth = false;
-    playBot()
+    playBot();
   }
 }
 
@@ -29,7 +31,7 @@ function playBot(){
   document.getElementById('you').classList.remove('turn');
   document.getElementById('bot').classList.add('turn');
   var cell = botBrain();
-  removeCursor()
+  removeCursor();
 
   setTimeout(function(){
     if(document.getElementById('cell-'+cell).innerHTML === ''){
@@ -121,6 +123,27 @@ function winColor(what){
 }
 
 function resetGame(){
+  cells = [0,1,2,3,4,5,6,7,8];
+  values = ['0','1','2','3','4','5','6','7','8'];
+  auth = true;
+  clearCell();
+  addCursor();
+  levelBot(level);
+  if(level !== 'Jarvis Pro'){
+    document.getElementById('you').classList.add('turn');
+    document.getElementById('bot').classList.remove('turn');
+  }
+}
+
+function clearCell(){
+  for(x in values){
+    document.getElementById('cell-'+values[x]).innerHTML = '';
+    document.getElementById('cell-'+values[x]).style.color = '#F2EDD7';
+  }
+}
+
+
+function leaveGame(){
   location.replace("./");
 }
 

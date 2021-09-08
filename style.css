@@ -36,6 +36,11 @@ body{
   color: red;
   font-weight: bold;
 }
+.icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .reset{
   float: right;
   color: #F2EDD7;
