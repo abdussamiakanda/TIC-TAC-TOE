@@ -8,6 +8,7 @@ function levelBot(bot){
   document.getElementById('popup').style.display='none';
   document.getElementById('bot').innerHTML = bot;
   if(bot === "Jarvis"){
+    auth = false;
     playBot()
   }
 }
