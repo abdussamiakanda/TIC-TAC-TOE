@@ -102,23 +102,23 @@ function botBrain(){
   var val = null;
   if(level === 'Jarvis Pro' && values[4] !== 'X' && values[4] !== 'O'){
     val = 4;
-  } else if((values[0] === "O" && values[3] === "O" && values[6] !== "O" && values[6] !== "X" && level === 'Jarvis') || (values[4] === "O" && values[2] === "O" && values[6] !== "O" && values[6] !== "X" && level === 'Jarvis') || (values[7] === "O" && values[8] === "O" && values[6] !== "O" && values[6] !== "X" && level === 'Jarvis')){
+  } else if((values[0] === "O" && values[3] === "O" && values[6] !== "O" && values[6] !== "X" && level.includes("Jarvis")) || (values[4] === "O" && values[2] === "O" && values[6] !== "O" && values[6] !== "X" && level.includes("Jarvis")) || (values[7] === "O" && values[8] === "O" && values[6] !== "O" && values[6] !== "X" && level.includes("Jarvis"))){
     val = 6;
-  } else if((values[6] === "O" && values[3] === "O" && values[0] !== "O" && values[0] !== "X" && level === 'Jarvis') || (values[4] === "O" && values[8] === "O" && values[0] !== "O" && values[0] !== "X" && level === 'Jarvis') || (values[1] === "O" && values[2] === "O" && values[0] !== "O" && values[0] !== "X" && level === 'Jarvis')){
+  } else if((values[6] === "O" && values[3] === "O" && values[0] !== "O" && values[0] !== "X" && level.includes("Jarvis")) || (values[4] === "O" && values[8] === "O" && values[0] !== "O" && values[0] !== "X" && level.includes("Jarvis")) || (values[1] === "O" && values[2] === "O" && values[0] !== "O" && values[0] !== "X" && level.includes("Jarvis"))){
     val = 0;
-  } else if((values[6] === "O" && values[4] === "O" && values[2] !== "O" && values[2] !== "X" && level === 'Jarvis') || (values[5] === "O" && values[8] === "O" && values[2] !== "O" && values[2] !== "X" && level === 'Jarvis') || (values[0] === "O" && values[1] === "O" && values[2] !== "O" && values[2] !== "X" && level === 'Jarvis')){
+  } else if((values[6] === "O" && values[4] === "O" && values[2] !== "O" && values[2] !== "X" && level.includes("Jarvis")) || (values[5] === "O" && values[8] === "O" && values[2] !== "O" && values[2] !== "X" && level.includes("Jarvis")) || (values[0] === "O" && values[1] === "O" && values[2] !== "O" && values[2] !== "X" && level.includes("Jarvis"))){
     val = 2;
-  } else if((values[2] === "O" && values[5] === "O" && values[8] !== "O" && values[8] !== "X" && level === 'Jarvis') || (values[0] === "O" && values[4] === "O" && values[8] !== "O" && values[8] !== "X" && level === 'Jarvis') || (values[6] === "O" && values[7] === "O" && values[8] !== "O" && values[8] !== "X" && level === 'Jarvis')){
+  } else if((values[2] === "O" && values[5] === "O" && values[8] !== "O" && values[8] !== "X" && level.includes("Jarvis")) || (values[0] === "O" && values[4] === "O" && values[8] !== "O" && values[8] !== "X" && level.includes("Jarvis")) || (values[6] === "O" && values[7] === "O" && values[8] !== "O" && values[8] !== "X" && level.includes("Jarvis"))){
     val = 8;
-  } else if((values[6] === "O" && values[0] === "O" && values[3] !== "O" && values[3] !== "X" && level === 'Jarvis') || (values[4] === "O" && values[5] === "O" && values[3] !== "O" && values[3] !== "X" && level === 'Jarvis')){
+  } else if((values[6] === "O" && values[0] === "O" && values[3] !== "O" && values[3] !== "X" && level.includes("Jarvis")) || (values[4] === "O" && values[5] === "O" && values[3] !== "O" && values[3] !== "X" && level.includes("Jarvis"))){
     val = 3;
-  } else if((values[1] === "O" && values[4] === "O" && values[7] !== "O" && values[7] !== "X" && level === 'Jarvis') || (values[6] === "O" && values[8] === "O" && values[7] !== "O" && values[7] !== "X" && level === 'Jarvis')){
+  } else if((values[1] === "O" && values[4] === "O" && values[7] !== "O" && values[7] !== "X" && level.includes("Jarvis")) || (values[6] === "O" && values[8] === "O" && values[7] !== "O" && values[7] !== "X" && level.includes("Jarvis"))){
     val = 7;
-  } else if((values[4] === "O" && values[7] === "O" && values[1] !== "O" && values[1] !== "X" && level === 'Jarvis') || (values[0] === "O" && values[2] === "O" && values[1] !== "O" && values[1] !== "X" && level === 'Jarvis')){
+  } else if((values[4] === "O" && values[7] === "O" && values[1] !== "O" && values[1] !== "X" && level.includes("Jarvis")) || (values[0] === "O" && values[2] === "O" && values[1] !== "O" && values[1] !== "X" && level.includes("Jarvis"))){
     val = 1;
-  } else if((values[2] === "O" && values[8] === "O" && values[5] !== "O" && values[5] !== "X" && level === 'Jarvis') || (values[3] === "O" && values[4] === "O" && values[5] !== "O" && values[5] !== "X" && level === 'Jarvis')){
+  } else if((values[2] === "O" && values[8] === "O" && values[5] !== "O" && values[5] !== "X" && level.includes("Jarvis")) || (values[3] === "O" && values[4] === "O" && values[5] !== "O" && values[5] !== "X" && level.includes("Jarvis"))){
     val = 5;
-  } else if((values[1] === "O" && values[7] === "O" && values[4] !== "O" && values[4] !== "X" && level === 'Jarvis') || (values[3] === "O" && values[5] === "O" && values[4] !== "O" && values[4] !== "X" && level === 'Jarvis') || (values[0] === "O" && values[8] === "O" && values[4] !== "O" && values[4] !== "X" && level === 'Jarvis') || (values[6] === "O" && values[2] === "O" && values[4] !== "O" && values[4] !== "X" && level === 'Jarvis')){
+  } else if((values[1] === "O" && values[7] === "O" && values[4] !== "O" && values[4] !== "X" && level.includes("Jarvis")) || (values[3] === "O" && values[5] === "O" && values[4] !== "O" && values[4] !== "X" && level.includes("Jarvis")) || (values[0] === "O" && values[8] === "O" && values[4] !== "O" && values[4] !== "X" && level.includes("Jarvis")) || (values[6] === "O" && values[2] === "O" && values[4] !== "O" && values[4] !== "X" && level.includes("Jarvis"))){
     val = 4;
   } else if((values[0] === "X" && values[3] === "X" && values[6] !== "O" && level !== 'Noob') || (values[4] === "X" && values[2] === "X" && values[6] !== "O" && level !== 'Noob') || (values[7] === "X" && values[8] === "X" && values[6] !== "O" && level !== 'Noob')){
     val = 6;
