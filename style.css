@@ -86,6 +86,29 @@ body{
 .button:hover{
   box-shadow: 0px 0px 10px rgba(255,255,255,0.8);
 }
+
+.floating{
+  padding: 10px 20px;
+  margin: 20px auto 0px auto;
+  background-color: var(--primary);
+  border-radius: 3px;
+  color: var(--secondary);
+  cursor: pointer;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.floating:hover{
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 25px); }
+    to   { transform: translate(0, -0px); }
+}
+
 .player-area {
   max-width: 320px;
   width: 100%;
