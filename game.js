@@ -7,6 +7,7 @@ function levelBot(bot){
   level = bot;
   document.getElementById('popup').style.display='none';
   document.getElementById('bot').innerHTML = bot;
+  document.getElementById('you').innerHTML = 'You';
   document.getElementById('leave').innerHTML = `<div onclick="leaveGame()" class="reset"><i class="fa fa-sign-out" aria-hidden="true"></i></div>`;
   document.getElementById('reset').innerHTML = ``;
   if(bot === "Jarvis Pro"){
