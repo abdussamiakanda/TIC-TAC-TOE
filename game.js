@@ -142,7 +142,6 @@ function clearCell(){
   }
 }
 
-
 function leaveGame(){
   location.replace("./");
 }
